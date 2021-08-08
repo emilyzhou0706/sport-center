@@ -41,8 +41,13 @@ The service provides endpoints that can add players to the tennis courts if they
     http://localhost:8080/sportcenters/1/playerAdd/3
     json input is not required
     
- 4) for the interest of time, I don't list all urls in the controllers for now   
- 
+ 4)  to get the availability of the whole sport center
+     http://localhost:8080/center/all
+     to get the availability of all courts
+     http://localhost:8080/court/all
+     to get the availability of a specific court
+      http://localhost:8080/court/details/{id}
+       (for the interest of time, I don't list all urls in the controllers for now)
    
 3. App description
    Design notes:
