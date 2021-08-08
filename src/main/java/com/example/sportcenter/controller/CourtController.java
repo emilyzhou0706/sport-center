@@ -43,8 +43,7 @@ public class CourtController {
                                @PathVariable (value = "courtid") Integer courtid,
                                @PathVariable (value = "playerAdd") Integer playerAdd) {
         if(!sportCenterRepository.existsById(centerid)) {
-            System.out.println("center not found*************");
-            throw new ResourceNotFoundException("Centerid " + centerid + " not found!!");
+            throw new ResourceNotFoundException("Centerid " + centerid + " not found");
         }
 
         return courtRepository.findById(courtid).map(court -> {
@@ -62,6 +61,6 @@ public class CourtController {
                 return courtRepository.save(court);
             }
         }).orElseThrow(() ->
-        new ResourceNotFoundException("Courtid " + courtid + "not found!!!"));
+        new ResourceNotFoundException("Courtid " + courtid + "not found"));
     }
 }
